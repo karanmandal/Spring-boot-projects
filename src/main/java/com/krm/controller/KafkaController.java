@@ -2,6 +2,7 @@ package com.krm.controller;
 
 import com.krm.service.Producer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,8 +20,12 @@ public class KafkaController {
     }
 
     @PostMapping(value = "/publish")
-    public void sendMessageToKafkaTopic(@RequestParam("message") String message) {
-        this.producer.sendMessage(message);
+    public ResponseEntity sendMessageToKafkaTopic(@RequestParam("topic") String topic,
+                                                  @RequestParam("message") String message) {
+
+        this.producer.sendMessage(topic, message);
+
+        return ResponseEntity.ok("Published!");
     }
 
 }
