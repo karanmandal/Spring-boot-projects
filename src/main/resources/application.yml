@@ -1,0 +1,6 @@
+app:
+  name: jigsaw
+spark:
+  home: B:/Internship/spark-2.4.1-bin-hadoop2.7
+master:
+  uri:  local
