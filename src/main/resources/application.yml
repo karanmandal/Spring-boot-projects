@@ -2,4 +2,5 @@ spring:
   data:
     cassandra:
       keyspace-name: sample
+      base-package: com.krm.model
       contact-points: 127.0.0.1

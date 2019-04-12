@@ -3,13 +3,10 @@ package com.krm.model;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
-import java.io.Serializable;
 import java.util.UUID;
 
 @Table("person")
-public class Person implements Serializable {
-
-    private static final long serialVersionUID = 1L;
+public class Person {
 
     @PrimaryKey
     private UUID id;
