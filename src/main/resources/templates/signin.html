@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat app - Sign in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="resources/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="row mt-4">
+
+        <div class="col-md-6 mx-auto">
+
+            <div class="card rounded-0 shadow">
+
+                <div class="card-header bg-white">
+                    <div class="card-title m-0">Login to continue</div>
+                </div>
+
+                <div class="card-body">
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white"><i class="fa fa-user px-2"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Username" id="txtUsername">
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-white"><i class="fa fa-key px-2"></i></span>
+                        </div>
+                        <input type="password" class="form-control" placeholder="Password" id="txtPassword">
+                    </div>
+
+                </div>
+
+                <div class="card-footer bg-white">
+                    <div class="pull-right">
+                        <button onclick="login()" class="btn btn-sm btn-primary px-3">Login</button>
+                        <small class="px-2"> OR</small>
+                        <a href="./signup" class="btn btn-sm btn-secondary px-3">Create account</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="resources/js/jquery-3.3.1.min.js"></script>
+<script src="resources/js/bootstrap.min.js"></script>
+<script src="resources/js/popper.min.js"></script>
+<script src="resources/js/signin.js"></script>
+</body>
+
+</html>

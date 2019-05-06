@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat app - Sign up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="resources/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="row mt-4">
+
+        <div class="col-md-6 mx-auto">
+
+            <div class="card rounded-0 shadow">
+
+                <div class="card-header bg-white">
+                    <div class="card-title m-0">Create new account</div>
+                </div>
+
+                <div class="card-body">
+
+                    <div class="form-group">
+                        <small>First name</small>
+                        <input id="txtFirstName" type="text" class="form-control form-control-sm"
+                               placeholder="Enter your first name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <small>Last name</small>
+                        <input id="txtLastName" type="text" class="form-control form-control-sm"
+                               placeholder="Enter your last name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <small>Username</small>
+                        <input id="txtUsername" type="text" class="form-control form-control-sm"
+                               placeholder="Enter unique username" required>
+                    </div>
+
+                    <hr>
+
+                    <div class="form-group">
+                        <small>New password</small>
+                        <input id="txtNewPassword" type="password" class="form-control form-control-sm"
+                               placeholder="Enter new password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <small>Confirm password</small>
+                        <input id="txtConfirmPassword" type="password" class="form-control form-control-sm"
+                               placeholder="Enter confirmation password" required>
+                    </div>
+
+                </div>
+
+                <div class="card-footer bg-white">
+                    <div class="pull-right">
+                        <button onclick="signup()" class="btn btn-sm btn-primary px-3">Create account</button>
+                        <small class="px-2"> OR</small>
+                        <a href="./signin" class="btn btn-sm btn-secondary px-3">Login</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="resources/js/jquery-3.3.1.min.js"></script>
+<script src="resources/js/bootstrap.min.js"></script>
+<script src="resources/js/popper.min.js"></script>
+<script src="resources/js/signup.js"></script>
+</body>
+
+</html>

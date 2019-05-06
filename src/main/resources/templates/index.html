@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat app</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/resources/css/main.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 my-4">
+            <button class="btn btn-danger px-3" onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mx-auto border p-3">
+            <h3>Send friend request</h3>
+            <input id="txtFriendsUsername" type="text" class="form-control mb-3" placeholder="Enter friends username">
+            <textarea id="txtMessage" class="form-control" placeholder="Write message here">Hello dear!</textarea>
+            <br/>
+            <button class="btn btn-primary" onClick="sendMessage()">Send message</button>
+        </div>
+    </div>
+</div>
+
+<script src="resources/js/jquery-3.3.1.min.js"></script>
+<script src="resources/js/bootstrap.min.js"></script>
+<script src="resources/js/popper.min.js"></script>
+<script src="/resources/js/main.js"></script>
+</body>
+</html>
