@@ -73,4 +73,9 @@ public class User extends BaseModel implements UserDetails {
     public boolean isEnabled() {
         return status.equals(AccountStatus.ACTIVATED);
     }
+
+    @JsonIgnore
+    public String getFullName() {
+        return String.format("%s %s", firstName, lastName);
+    }
 }

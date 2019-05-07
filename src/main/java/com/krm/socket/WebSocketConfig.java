@@ -1,4 +1,4 @@
-package com.krm.configuration;
+package com.krm.socket;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.krm.model.User;
@@ -48,11 +48,12 @@ public class WebSocketConfig implements WebSocketConfigurer {
         return new ObjectMapper();
     }
 
+    @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         registry.addHandler(socketHandler, "/stream").addInterceptors(httpSessionHandshakeInterceptor());
     }
 
-    // Authentication handshake interceptor
+    // A handshake interceptor
     @Bean
     public HandshakeInterceptor httpSessionHandshakeInterceptor() {
 
@@ -61,6 +62,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
             @Override
             public boolean beforeHandshake(ServerHttpRequest request, ServerHttpResponse response, WebSocketHandler wsHandler, Map<String, Object> attributes) throws Exception {
 
+                // Authenticate the socket connection once
                 if (request instanceof ServletServerHttpRequest) {
                     ServletServerHttpRequest servletServerRequest = (ServletServerHttpRequest) request;
                     HttpServletRequest servletRequest = servletServerRequest.getServletRequest();
@@ -85,6 +87,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
 
                 }
 
+                // Deny the invalid connection request
                 return false;
             }
 

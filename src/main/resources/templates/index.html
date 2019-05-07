@@ -10,21 +10,28 @@
 <body>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-6 my-4">
-            <button class="btn btn-danger px-3" onclick="logout()">Logout</button>
-        </div>
-    </div>
+    <div class="row my-4">
 
-    <div class="row">
+        <div class="col-md-6">
+
+            <button class="btn btn-danger px-3" onclick="logout()">Logout</button>
+
+            <span class="font-weight-bold" id="txtUser"></span>
+
+            <h5 class="mt-2">Console</h5>
+            <textarea class="border bg-light p-2 my-2 form-control w-100" id="txtConsole" style="height: 600px;"></textarea>
+
+        </div>
+
         <div class="col-md-6 mx-auto border p-3">
             <h3>Send friend request</h3>
             <input id="txtFriendsUsername" type="text" class="form-control mb-3" placeholder="Enter friends username">
             <textarea id="txtMessage" class="form-control" placeholder="Write message here">Hello dear!</textarea>
             <br/>
-            <button class="btn btn-primary" onClick="sendMessage()">Send message</button>
+            <button class="btn btn-primary" onClick="sendNormalMessage()">Send message</button>
         </div>
     </div>
+
 </div>
 
 <script src="resources/js/jquery-3.3.1.min.js"></script>
